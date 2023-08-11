@@ -27,7 +27,7 @@ public class App {
         if (num <= 1) {
             éPrimo = false;
         } else {
-            for (int i = 2; i <= Math.sqrt(num); i++) {
+            for (int i = 2; i <= num; i++) {
                 if (num % i == 0) {
                     éPrimo = false;
                     divisores += i + " ";
