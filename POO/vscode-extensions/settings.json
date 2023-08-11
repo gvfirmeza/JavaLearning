@@ -1,0 +1,8 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.renderWhitespace": "all",
+    "files.trimTrailingWhitespace": true,
+    "editor.inlayHints.enabled": "off",
+    "editor.minimap.enabled": false,
+    "editor.rulers": []
+}
