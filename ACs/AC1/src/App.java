@@ -2,7 +2,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         apNotas(8.5,7.5,9.5);
         nums();
-        ePrimo(18);
+        ePrimo(11);
         diaSemana(5);
         eBissexto(1900);
     }
