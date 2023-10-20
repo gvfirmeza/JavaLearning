@@ -1,4 +1,4 @@
-class Aluno {
+public class Aluno {
     private String nome;
     private String curso;
     private String matricula;
@@ -31,5 +31,13 @@ class Aluno {
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+
+    @Override
+    public String toString() {
+        return 
+                nome + " | " +
+                curso + " | "  +
+                matricula;
     }
 }
