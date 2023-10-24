@@ -1,0 +1,3 @@
+nome,curso,matricula
+Cesar,Ciencia de Dados,12777
+Mirta,ADS,202302
