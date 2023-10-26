@@ -14,7 +14,7 @@ public class AlunoDAO {
 
     public void adicionarAluno(Aluno aluno) {
         if (alunos.containsKey(aluno.getMatricula())) {
-            System.out.println("Erro: A matrícula já está em uso. Não é possível adicionar o aluno.");
+            System.out.println("\nErro: A matrícula já está em uso. Não é possível adicionar o aluno.");
         } else {
             alunos.put(aluno.getMatricula(), aluno);
         }
@@ -26,9 +26,11 @@ public class AlunoDAO {
 
     public void atualizarCursoAluno(String matricula, String novoCurso) {
         Aluno aluno = alunos.get(matricula);
-        if (aluno != null) {
+        if (aluno != null && alunos.containsKey(aluno.getMatricula())) {
             aluno.setCurso(novoCurso);
             alunos.put(matricula, aluno);
+        } else {
+            System.out.println("\nErro: Não foi encontrado nenhum aluno com essa matrícula.");
         }
     }
 
@@ -37,8 +39,14 @@ public class AlunoDAO {
     }
 
     public void listarTodosOsAlunos() {
-        for (Aluno aluno : alunos.values()) {
-            System.out.println(aluno);
+        if (alunos.isEmpty()) {
+            System.out.println("\nErro: Não há alunos cadastrados.");
+        } else {
+            System.out.println("\nTodos os alunos:\n");
+            for (Aluno aluno : alunos.values()) {
+                System.out.println(aluno);
+            }
         }
     }
+
 }

@@ -74,7 +74,6 @@ public class App {
                     crud.atualizarCursoAluno(matriculaAtualizar, novoCurso);
                     break;
                 case 4:
-                    System.out.println("\nTodos os alunos:");
                     crud.listarTodosOsAlunos();
                     break;
                 case 5:
