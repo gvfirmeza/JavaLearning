@@ -1,5 +1,9 @@
+package dao;
+
 import java.util.HashMap;
 import java.util.Map;
+
+import entidades.Aluno;
 
 public class AlunoDAO {
     private Map<String, Aluno> alunos;
@@ -13,12 +17,15 @@ public class AlunoDAO {
     }
 
     public void adicionarAluno(Aluno aluno) {
-        if (alunos.containsKey(aluno.getMatricula())) {
-            System.out.println("\nErro: A matrícula já está em uso. Não é possível adicionar o aluno.");
+        String matricula = aluno.getMatricula();
+        if (alunos.containsKey(matricula)) {
+            System.out.println("\nErro: A matrícula já está em uso. Não foi possível adicionar o aluno.");
+        } else if (!matricula.matches("\\d+")) {
+            System.out.println("\nErro: A matrícula deve conter apenas números. Não foi possível adicionar o aluno.");
         } else {
-            alunos.put(aluno.getMatricula(), aluno);
+            alunos.put(matricula, aluno);
         }
-    }
+    }    
 
     public void removerAluno(String matricula) {
         alunos.remove(matricula);

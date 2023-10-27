@@ -1,6 +1,9 @@
 import java.util.Scanner;
 import java.io.*;
 
+import dao.AlunoDAO;
+import entidades.Aluno;
+
 public class App {
     private static final String FILE_NAME = "alunos.txt";
 
