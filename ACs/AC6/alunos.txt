@@ -1,3 +1,2 @@
-nome,curso,matricula
 Alegria,Ciencia de Dados,123123
 Jonas,Ciencia de Dados,0988

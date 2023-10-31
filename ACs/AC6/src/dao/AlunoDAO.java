@@ -25,10 +25,14 @@ public class AlunoDAO {
         } else {
             alunos.put(matricula, aluno);
         }
-    }    
+    }
 
     public void removerAluno(String matricula) {
-        alunos.remove(matricula);
+        if (alunos.containsKey(matricula)) {
+            alunos.remove(matricula);
+        } else {
+            System.out.println("\nErro: Não foi encontrado nenhum aluno com essa matrícula.");
+        }
     }
 
     public void atualizarCursoAluno(String matricula, String novoCurso) {
