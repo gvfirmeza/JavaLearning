@@ -1,3 +1,2 @@
-nome,curso,matricula
-Cesar,Ciencia de Dados,12777
-Mirta,ADS,202302
+Alegria,Ciencia de Dados,123123
+Jonas,Ciencia de Dados,0988
