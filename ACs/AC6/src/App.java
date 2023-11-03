@@ -1,6 +1,9 @@
 import java.util.Scanner;
 import java.io.*;
 
+import dao.AlunoDAO;
+import entidades.Aluno;
+
 public class App {
     private static final String FILE_NAME = "alunos.txt";
 
@@ -14,7 +17,6 @@ public class App {
     private static void carregarDados(AlunoDAO crud, String fileName) {
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
-            br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
                 String nome = values[0];
@@ -29,7 +31,6 @@ public class App {
 
     private static void salvarDados(AlunoDAO crud, String fileName) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName))) {
-            bw.write("nome,curso,matricula\n");
             for (Aluno aluno : crud.getAlunos().values()) {
                 bw.write(aluno.getNome() + "," + aluno.getCurso() + "," + aluno.getMatricula() + "\n");
             }
@@ -74,7 +75,6 @@ public class App {
                     crud.atualizarCursoAluno(matriculaAtualizar, novoCurso);
                     break;
                 case 4:
-                    System.out.println("\nTodos os alunos:");
                     crud.listarTodosOsAlunos();
                     break;
                 case 5:
