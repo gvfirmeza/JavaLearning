@@ -1,2 +1,3 @@
-Alegria,Ciencia de Dados,123123
+Edward,Engenharia da Computacao,202301777
 Jonas,Ciencia de Dados,0988
+Cesar,ADS,20230113
